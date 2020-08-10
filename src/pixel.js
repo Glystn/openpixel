@@ -19,7 +19,7 @@ class Pixel {
 
   getAttribute() {
     return {
-      id:           () => Config.id, // website Id
+      pid:          () => Config.pid, // publisher ID
       uid:          () => Cookie.get('uid'), // user Id
       ev:           () => this.event, // event being triggered
       ed:           () => this.optional, // any event data to pass along

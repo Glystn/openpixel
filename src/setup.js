@@ -6,7 +6,7 @@ Cookie.setUtms();
 // process the queue and future incoming commands
 pixelFunc.process = function(method, value, optional) {
   if (method === 'init') {
-    Config.id = value;
+    Config.pid = value;
   } else if(method === 'param') {
     Config.params[value] = () => optional
   } else if(method === 'event') {

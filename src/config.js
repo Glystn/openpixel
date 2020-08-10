@@ -1,5 +1,5 @@
 var Config = {
-  id: '',
+  pid: '',
   params: {},
   version: versionNumber
 }

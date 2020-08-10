@@ -7,13 +7,13 @@ var HEADER_COMMENT     = process.env.OPIX_HEADER_COMMENT || '// Open Pixel v1.2.
 var DESTINATION_FOLDER = process.env.OPIX_DESTINATION_FOLDER || './dist';
 
 // The name of the global function and the cookie prefix that will be included in the snippet and is the client to fire off custom events
-var PIXEL_FUNC_NAME    = process.env.OPIX_PIXEL_FUNC_NAME || 'opix';
+var PIXEL_FUNC_NAME    = process.env.OPIX_PIXEL_FUNC_NAME || 'glystn';
 
 // The remote URL of the pixel.gif file that will be pinged by the browser to send tracking information
-var PIXEL_ENDPOINT     = process.env.OPIX_PIXEL_ENDPOINT || '/pixel.gif';
+var PIXEL_ENDPOINT     = process.env.OPIX_PIXEL_ENDPOINT || 'https://p.glystn.com/v1/pixel';
 
 // The core openpixel.min.js file that the snippet will loaded asynchronously into the browser
-var JS_ENDPOINT        = process.env.OPIX_JS_ENDPOINT || '/openpixel.js';
+var JS_ENDPOINT        = process.env.OPIX_JS_ENDPOINT || 'https://assets.glystn.com/pixel/js/pixel.js';
 
 // The current version of your openpixel configuration
 var VERSION            = process.env.OPIX_VERSION || '1';
@@ -85,3 +85,4 @@ exports.openpixel = openpixel;
 exports.snippet = snippet;
 exports.watch = watch;
 exports.build = build;
+exports.default = build;
