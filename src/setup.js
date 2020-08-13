@@ -51,7 +51,16 @@ window.onload = function() {
     dataAttributes[i].addEventListener('click', function(_e) {
       var event = this.getAttribute('data-OPIX_FUNC-event');
       if (event) {
-        new Pixel(event, Helper.now(), this.getAttribute('data-OPIX_FUNC-data'));
+        var optional = {};
+        var attrib = this.getAttribute('data-OPIX_FUNC-data');
+        var href = this.href;
+        if (attrib) {
+          optional['attribute'] = attrib;
+        }
+        if (href) {
+          optional['href'] = href;
+        }
+        new Pixel(event, Helper.now(), optional);
       }
     }.bind(dataAttributes[i]));
   }
